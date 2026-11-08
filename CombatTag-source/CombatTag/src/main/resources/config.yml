@@ -1,0 +1,38 @@
+# ---------------------------------------------------------------
+#  CombatTag - config.yml
+# ---------------------------------------------------------------
+combat:
+  duration-seconds: 20
+  # Every new hit during combat restarts the timer.
+  refresh-on-hit: true
+  # After a phase ends you cannot be re-tagged for this many seconds.
+  retag-cooldown-seconds: 3
+  # When a player kills their opponent, the killer's combat ends right away.
+  end-on-kill: true
+  # Kick the player out of a boat/minecart/horse when combat starts.
+  eject-from-vehicle-on-tag: true
+  # Commands (without the slash) non-OPs may still use in combat. Empty = none.
+  allowed-commands: []
+
+countdown:
+  bossbar: true
+  actionbar: true
+  # Big centre-screen number for the last N seconds (0 = off)
+  title-last-seconds: 5
+  sounds: true
+
+messages:
+  start: "&c&l[COMBAT] ⚔️ You are now in combat! Do not log out! (%seconds%s)"
+  end: "&a&l[COMBAT] 🛡️ Combat phase exited. Status: Safe."
+  command-blocked: "&c&l[COMBAT] 🚫 Commands are disabled during combat!"
+  vehicle-blocked: "&c&l[COMBAT] 🚫 You can't ride vehicles during combat!"
+  bossbar: "&c&l⚔ COMBAT &7• &f%seconds%s"
+  actionbar: "&c&l⚔ &f&l%seconds% &c&l⚔"
+  title-sub: "&7in combat"
+  logout-broadcast: "&c&l[COMBAT] &f%player% &7logged out in combat - their items were dropped!"
+  usage: "&cUsage: /combat <reload|status [player]|end <player>>"
+  reloaded: "&aCombatTag reloaded."
+  not-found: "&cPlayer not found."
+  status-in: "&f%player% &7is in combat (&c%seconds%s&7 left)."
+  status-out: "&f%player% &7is not in combat."
+  ended: "&7Ended combat for &f%player%&7."

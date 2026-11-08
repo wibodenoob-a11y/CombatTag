@@ -1,0 +1,18 @@
+name: CombatTag
+version: '1.0.0'
+main: dev.combattag.CombatPlugin
+api-version: '1.21'
+description: 20 second combat phase - no commands, no vehicles, loot drops on logout or death.
+commands:
+  combat:
+    description: CombatTag admin command
+    aliases: [ct]
+    usage: /<command> <reload|status|end>
+    permission: combattag.admin
+permissions:
+  combattag.admin:
+    description: Use /combat
+    default: op
+  combattag.bypass:
+    description: Never tagged, never blocked from commands (OPs have this by default)
+    default: op
